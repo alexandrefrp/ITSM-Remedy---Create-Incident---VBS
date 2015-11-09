@@ -3,13 +3,16 @@
 'Abertura de registros de Incidentes via VBScript - Out/2015
 '============================================================
 
+'On Error Resume Next
+
 'Objeto para requisições WEB
 Set objHTTP = CreateObject("MsXml2.ServerXmlHttp")
 objHTTP.SetOption 2, 13056 'Ignora erros de certificados (https)
 
 '--------------------------------
 'Determina a URL WebService GSC
-url = "http://YOUR-URL/arsys/services/ARService?server=YOUR-APPSERVER&webService=HPD_IncidentInterface_Create_WS"
+'http://<midtier_server>/arsys/WSDL/public/<servername>/HPD_IncidentInterface_Create_WS
+url = "http://<YOUR-URL>/arsys/services/ARService?server=<YOUR-APPSERVER>&webService=HPD_IncidentInterface_Create_WS"
 
 'Usuário e senha para acesso ao GSC
 user = "user"

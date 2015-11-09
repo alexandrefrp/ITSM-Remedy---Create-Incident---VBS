@@ -10,11 +10,11 @@ Set objHTTP = CreateObject("MsXml2.ServerXmlHttp")
 objHTTP.SetOption 2, 13056 'Ignora erros de certificados (https)
 
 '--------------------------------
-'Determina a URL WebService GSC
+'Determina a URL WebService ITSM Remedy
 'http://<midtier_server>/arsys/WSDL/public/<servername>/HPD_IncidentInterface_Create_WS
 url = "http://<YOUR-URL>/arsys/services/ARService?server=<YOUR-APPSERVER>&webService=HPD_IncidentInterface_Create_WS"
 
-'Usuário e senha para acesso ao GSC
+'Usuário e senha para acesso ao ITSM Remedy
 user = "user"
 pass = "password"
 
